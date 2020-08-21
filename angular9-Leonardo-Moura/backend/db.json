@@ -24,6 +24,21 @@
       "name": "Impressora",
       "price": "800.50",
       "id": 5
+    },
+    {
+      "name": "Veio do Formulário",
+      "price": "9.99",
+      "id": 6
+    },
+    {
+      "name": "Geladeira do formulário",
+      "price": "1840.50",
+      "id": 7
+    },
+    {
+      "name": "Lapis preto",
+      "price": "2.50",
+      "id": 8
     }
   ]
 }
