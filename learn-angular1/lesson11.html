@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson11">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/lesson11.js"></script>
+</head>
+
+<body>
+  <div ng-controller="x">
+    <select ng-model="selectedDiv" ng-options="item for item in div"></select>
+    You Selected = {{selectedDiv}}
+    <hr />
+    <div ng-switch="selectedDiv">
+      <div style="border: 1px solid black" ng-switch-when="div1">
+        Hello from first Div
+      </div>
+      <div style="border: 1px solid blue" ng-switch-when="div2">
+        Hi from second div
+      </div>
+      <div style="border: 1px solid red" ng-switch-when="div3">
+        God Bless fromThird div
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

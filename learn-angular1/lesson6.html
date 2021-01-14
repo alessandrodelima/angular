@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson6">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/lesson6.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div>
+    <p ng-class="style">Hello from Maruti...</p>
+    <br />
+    <input type="text" ng-model="style" />
+
+    <p ng-class="{changeColor:a, changeSize:b, italic:c}">Bye, bye from Maruti...</p>
+    <br />
+    <input type="checkbox" ng-model="a" /> Color <br />
+    <input type="checkbox" ng-model="b" /> Size <br />
+    <input type="checkbox" ng-model="c" /> Italic <br />
+
+  </div>
+</body>
+</html>

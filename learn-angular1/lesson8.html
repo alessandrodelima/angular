@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="js/angular.min.js"></script>
+</head>
+<body>
+  <div>
+    <input type="text" ng-init="x=0" ng-keyup="x=x+1" /> {{x}}
+    <br/>
+    <input type="text" ng-init="y=0" ng-keydown="y=y+1" /> {{y}}
+    <br/>
+    <input type="checkbox" ng-model="check" />
+    <br/>
+    <textarea cols="30" rows="10" ng-disabled="check"></textarea>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson10">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/lesson10.js"></script>
+</head>
+
+<body>
+  <div ng-controller="x">
+    <form name="form1">
+      <label>Name:</label>
+      <input type="text" name="name" ng-model="initialname" required />
+      <span style="color:red" ng-show="form1.name.$error.required">
+        Please, provide your name
+      </span>
+      <br />
+      <label>Email:</label>
+      <input name="email" type="email" ng-model="initialemail" />
+      <span style="color:red" ng-show="form1.email.$error.email">
+        Please, provide valid email
+      </span>
+      <br />
+      <label>Age:</label>
+      <input name="age" ng-model="age" ng-pattern="pattern" />
+      <span style="color:red" ng-show="form1.age.$error.pattern">
+        Age must be positive
+      </span>
+      <br />
+    </form>
+  </div>
+</body>
+
+</html>
