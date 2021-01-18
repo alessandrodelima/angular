@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson13">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular.min.js.map"></script>
+  <script src="js/lesson13-ng-value.js"></script>
+</head>
+
+<body>
+  <div ng-controller="x">
+    <h4 id="favorite_CAR">Which is your favorite?</h4>
+    <label ng-repeat="car in cars">
+      {{car}}
+      <input type="radio" ng-model="my.favorite" ng-value="car">
+    </label>
+    <br />
+    <br />
+    <div>Your Favorite Car is: {{my.favorite}}</div>
+  
+  </div>
+</body>
+
+</html>

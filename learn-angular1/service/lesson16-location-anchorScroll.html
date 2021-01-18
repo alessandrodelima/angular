@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson16">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/angular.min.js.map"></script>
+  <script src="../js/lesson16-location-anchorScroll.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div id="div" ng-controller="x">
+    <div style="color:green;">
+      <a id="up" ng-click="goDown()">Go Down</a>
+  </div>
+  <div style="color:red;">
+      <a id="down" ng-click="goUp()">You're at the bottom</a>
+  </div>
+  </div>
+</body>
+</html>

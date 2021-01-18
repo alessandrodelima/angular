@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson14">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Angularjs step by step</title>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/angular.min.js.map"></script>
+  <script src="../js/lesson14-filter-watch.js"></script>
+</head>
+
+<body>
+  <div ng-controller="x">
+    <input type="text" ng-model="search">
+    <table>
+      <tbody>
+        <tr ng-repeat="car in cars">
+          <td>{{car.carId}}</td>
+          <td>{{car.carName}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
