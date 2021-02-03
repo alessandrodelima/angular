@@ -7,22 +7,26 @@
   <script src="node_modules/angular/angular.min.js"></script>
   <script>
     angular.module('app', []);
-    angular.module('app').controller('MeuController', [
-      function() {
-        const self = this;
-        self.value = 10;
-        self.inc = function() {
-          self.value++;
+
+      angular.module('app').factory('utils', function() {
+        function upper(input) {
+          return input.toUpperCase();
         }
-      }
-    ])
+        return { upper }
+      });
+   
+      angular.module('app').controller('MeuController', [
+        'utils', 
+        function(utils) {
+          const self = this;
+        self.value = utils.upper("texto")
+
+      }])
   </script>
 </head>
 <body>
   <div ng-controller="MeuController as ctrl">
     <h1>{{ ctrl.value }}</h1>
-    <input ng-model="ctrl.value" />
-    <button ng-click="ctrl.inc()"> Inc </button>
   </div>
 </body>
 </html>
