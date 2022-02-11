@@ -7,7 +7,7 @@
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
     "jasmine-core": "2.3.4",
-    "karma": "0.12.37",
+    "karma": "6.3.14",
     "karma-chrome-launcher": "0.2.0",
     "karma-jasmine": "0.3.6",
     "karma-ng-html2js-preprocessor": "0.1.2"
