@@ -8,31 +8,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ChildItemComponent implements OnInit {
 
   @Input() title: string | undefined;
-  @Output() plusOne: EventEmitter<any> = new EventEmitter();
-  @Output() plusTwo = new EventEmitter<any>();
-  @Output() minusOne = new EventEmitter<any>();
-  @Output() minusTwo = new EventEmitter<any>();
-
+  //@Output() plusOne: EventEmitter<any> = new EventEmitter();
+  @Output() inc = new EventEmitter<number>();
+  
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  plusOneClick() {
-    this.plusOne.emit();
+  btnClick(n: number | undefined) {
+    this.inc.emit(n);
   }
-
-  plusTwoClick() {
-    this.plusTwo.emit();
-    
-  }
-
-  ninusOneClick() {
-    this.minusOne.emit();
-  }
-
-  ninusTwoClick() {
-    this.minusTwo.emit();
-  }
-
 }
