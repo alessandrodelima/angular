@@ -1,0 +1,61 @@
+<p>event-binding works!</p>
+<section class="container">
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="salve()"> Save</button>
+        <button mat-raised-button color="warn" (click)="inc()"> {{ buttonName }}</button>
+    </div>
+</section>
+<br><br>
+
+<section class="container">
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" [disabled]="!btnEnable"> My Button1</button>
+        <button mat-raised-button color="warn" [disabled]="!btnEnable"> My button 2</button>
+
+        <button mat-raised-button color="warn" (click)="disabled()" [disabled]="!btnEnable"> Disabled</button>
+
+        <mat-progress-spinner color="primary" [mode]="spinnerMode" value="0">
+        </mat-progress-spinner>
+
+    </div>
+</section>
+<section class="example-section">
+    <mat-checkbox class="example-margin" color="warn" (change)="cbChange($event)">Disable / Enable</mat-checkbox>
+    <br>
+</section>
+<section>
+    <div class="example-additional-selection">
+        <h4>Select básico</h4>
+        <mat-form-field appearance="fill">
+            <mat-label>Cars</mat-label>
+            <mat-select matNativeControl required [disabled]="selectDisabled"
+                (selectionChange)="selectionChange($event)">
+                <mat-option value="1">Volvo</mat-option>
+                <mat-option value="2">Saab</mat-option>
+                <mat-option value="3">Mercedes</mat-option>
+                <mat-option value="4">Audi</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="footer">
+            <p>Selected option {{ selectedOption }}</p>
+        </div>
+    </div>
+</section>
+
+<mat-divider></mat-divider>
+<section>
+    <mat-card>
+        <mat-card-title>Exercício</mat-card-title>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <input matInput 
+                        placeholder="First name" 
+                        (input)= "inputName = $any($event.target).value"
+                        [value]= "inputName">
+                  </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>Name:  {{inputName}} </button>
+            </mat-card-actions>
+    </mat-card>
+</section>

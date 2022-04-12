@@ -1,0 +1,52 @@
+<section>
+    <mat-card style="margin: 20px;">
+        <mat-card-title>Form </mat-card-title>
+        <mat-card-content>
+            <form action="">
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Enter your name" [(ngModel)]="name1" name="first1">
+                </mat-form-field>
+
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Enter your name again" [(ngModel)]="name2" name="first2">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <p><button mat-button>Name1: {{name1}} </button></p>
+
+            <p><button mat-button>Name2: {{name2}} </button></p>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+<section>
+    <mat-card style="margin: 20px;">
+        <mat-card-title>Client </mat-card-title>
+        <mat-card-content>
+            <form action="">
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="First name" name="firstname" [(ngModel)]="client.firstName">
+                </mat-form-field>
+
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Last name" name="lastname" [(ngModel)]="client.lastName">
+                </mat-form-field>
+
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Address" name="address" [(ngModel)]="client.address">
+                </mat-form-field>
+
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Age" type="number" name="age" [(ngModel)]="client.age">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <p><button mat-button><b>First Name: </b>{{client.firstName}} </button></p>
+            <p><button mat-button><b>Last Name: </b>{{client.lastName}} </button></p>
+            <p><button mat-button><b>Address: </b>{{client.address}} </button></p>
+            <p><button mat-button><b>Age: </b>{{client.age}} </button></p>
+        </mat-card-actions>
+    </mat-card>
+</section>
