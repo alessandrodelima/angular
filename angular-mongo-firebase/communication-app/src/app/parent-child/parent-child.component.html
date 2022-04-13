@@ -1,0 +1,18 @@
+<div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="stopwatch.start()">Start</button>
+    <button mat-raised-button color="accent" (click)="stopwatch.stop()">Stop</button>
+    <button mat-raised-button color="warn" (click)="stopwatch.clear()">Clear</button>
+</div>
+<app-timer #stopwatch>
+</app-timer>
+
+<div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="start()">Start</button>
+    <button mat-raised-button color="accent" (click)="stop()">Stop</button>
+    <button mat-raised-button color="warn" (click)="clear()">Clear</button>
+</div>
+
+<!-- <app-timer #stopwatch2>
+</app-timer> -->
+
+<p #myP>Hi</p>
